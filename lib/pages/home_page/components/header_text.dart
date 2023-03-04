@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 import '../../../size_config.dart';
 
 class HeaderTextWithIcon extends StatelessWidget {
@@ -23,9 +24,10 @@ class HeaderTextWithIcon extends StatelessWidget {
           children: [
             Text(
               greeting,
-              style: GoogleFonts.arimo(
+              style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
+                fontFamily: GoogleFonts.arimo().fontFamily,
                 color: Colors.black,
               ),
             ),

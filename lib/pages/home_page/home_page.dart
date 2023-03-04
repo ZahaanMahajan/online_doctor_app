@@ -11,7 +11,6 @@ class HomePage extends StatelessWidget {
     SizeConfig().init(context);
     return const Scaffold(
       body: Body(),
-      // bottomNavigationBar: CustomNavBar(),
     );
   }
 }
