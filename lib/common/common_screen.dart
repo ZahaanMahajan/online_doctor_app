@@ -1,5 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:online_doctor_app/pages/chat_page/chat_page.dart';
@@ -20,7 +18,7 @@ class _CommonScreenState extends State<CommonScreen> {
     const HomePage(),
     const SearchPage(),
     const ChatPage(),
-    const RecordsPage(),
+    const RecordPage(),
   ];
 
   //on page function to reset page layout
@@ -41,28 +39,14 @@ class _CommonScreenState extends State<CommonScreen> {
   //bottom navigation bar widget
   bottomNavBar() {
     return GNav(
+      backgroundColor: Colors.white,
       gap: 8,
-      backgroundColor: const Color(0xFfF9F9F9),
-      onTabChange: (index) {
-        onPageChange(index);
-      },
+      onTabChange: (index) => onPageChange(index),
       tabs: const [
-        GButton(
-          icon: Icons.home,
-          text: "Home",
-        ),
-        GButton(
-          icon: Icons.search,
-          text: "Search",
-        ),
-        GButton(
-          icon: Icons.chat,
-          text: "Chats",
-        ),
-        GButton(
-          icon: Icons.person_outline,
-          text: "Records",
-        ),
+        GButton(icon: Icons.home, text: "Home"),
+        GButton(icon: Icons.search, text: "Search"),
+        GButton(icon: Icons.chat, text: "Chats"),
+        GButton(icon: Icons.person_outline, text: "Profile"),
       ],
     );
   }
