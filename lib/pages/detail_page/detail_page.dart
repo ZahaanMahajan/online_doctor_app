@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../models/doctor.dart';
+import 'components/body.dart';
 
 class DetialPage extends StatelessWidget {
   const DetialPage({
@@ -13,9 +14,7 @@ class DetialPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appBar(context),
-      body: Center(
-        child: Text(doctor.title!),
-      ),
+      body: Body(doctor: doctor),
     );
   }
 

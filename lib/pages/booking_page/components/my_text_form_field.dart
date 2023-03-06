@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
+import '../../../widgets/default_button.dart';
 
 class MyTextFormField extends StatelessWidget {
   const MyTextFormField({super.key});
@@ -28,7 +29,10 @@ class MyTextFormField extends StatelessWidget {
               SizedBox(height: getProportionateScreenHeight(30)),
 
               // Continue Button
-              bookingButon(),
+              DefaultButton(
+                text: "Book Appointment",
+                onTap: () {},
+              ),
               SizedBox(height: getProportionateScreenHeight(20)),
 
               const Text(
@@ -41,28 +45,6 @@ class MyTextFormField extends StatelessWidget {
                 ),
               ),
             ],
-          ),
-        ),
-      ),
-    );
-  }
-
-  InkWell bookingButon() {
-    return InkWell(
-      onTap: () {},
-      child: Container(
-        width: double.infinity,
-        height: getProportionateScreenHeight(60),
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(14),
-            color: const Color(0xFF1D07A9)),
-        child: const Center(
-          child: Text(
-            "Book Appointment",
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-            ),
           ),
         ),
       ),
